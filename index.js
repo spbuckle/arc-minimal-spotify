@@ -57,6 +57,14 @@ const vinylChecks = () => {
   }
 };
 
-export default {
-    vinylChecks
+window.onload = function() {
+  setTimeout(function() {
+    vinylChecks();
+  }, 1000);
 };
+
+window.addEventListener('click', () => {
+  setTimeout(function() {
+    vinylChecks();
+  }, 1000);
+});
