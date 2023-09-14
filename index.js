@@ -39,7 +39,7 @@ const isAlbum = () => {
   return pageElement.length !== 0;
 }
 
-export const vinylChecks = () => {
+const vinylChecks = () => {
   if (isAlbum()) {
     const playingElement = document.querySelectorAll('div[data-testid="track-list"] div[data-testid="tracklist-row"] div[role="gridcell"] > div > img');
     const albumArt = document.querySelector('[data-testid="album-page"] .contentSpacing > button div');
@@ -55,4 +55,8 @@ export const vinylChecks = () => {
     vinylSpin(playingElement, albumArt );
     AllCustomVinyl(albumArt, albumName);
   }
+};
+
+export default {
+    vinylChecks
 };
