@@ -39,7 +39,7 @@ const isAlbum = () => {
   return pageElement.length !== 0;
 }
 
-const vinylChecks = () => {
+export const vinylChecks = () => {
   if (isAlbum()) {
     const playingElement = document.querySelectorAll('div[data-testid="track-list"] div[data-testid="tracklist-row"] div[role="gridcell"] > div > img');
     const albumArt = document.querySelector('[data-testid="album-page"] .contentSpacing > button div');
@@ -56,15 +56,3 @@ const vinylChecks = () => {
     AllCustomVinyl(albumArt, albumName);
   }
 };
-
-window.onload = function() {
-  setTimeout(function() {
-    vinylChecks();
-  }, 1000);
-};
-
-window.addEventListener('click', () => {
-  setTimeout(function() {
-    vinylChecks();
-  }, 1000);
-});
